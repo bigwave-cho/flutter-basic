@@ -119,32 +119,23 @@ class App extends StatelessWidget {
                   amount: "6 428",
                   icon: Icons.euro_rounded,
                   isInverted: false,
+                  order: 1,
                 ),
-                Transform.translate(
-                  offset: const Offset(
-                    0,
-                    -20,
-                  ),
-                  child: const CurrencyCard(
-                    name: "BitCoin",
-                    code: "BTC",
-                    amount: "9 428",
-                    icon: Icons.currency_bitcoin_rounded,
-                    isInverted: true,
-                  ),
+                const CurrencyCard(
+                  name: "BitCoin",
+                  code: "BTC",
+                  amount: "9 428",
+                  icon: Icons.currency_bitcoin_rounded,
+                  isInverted: true,
+                  order: 2,
                 ),
-                Transform.translate(
-                  offset: const Offset(
-                    0,
-                    -40,
-                  ),
-                  child: const CurrencyCard(
-                    name: "Rupee",
-                    code: "RUP",
-                    amount: "9 428",
-                    icon: Icons.currency_rupee_rounded,
-                    isInverted: false,
-                  ),
+                const CurrencyCard(
+                  name: "Rupee",
+                  code: "RUP",
+                  amount: "9 428",
+                  icon: Icons.currency_rupee_rounded,
+                  isInverted: false,
+                  order: 3,
                 ),
               ],
             ),
