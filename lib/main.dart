@@ -111,12 +111,14 @@ class App extends StatelessWidget {
                 height: 20,
               ),
               Container(
+                clipBehavior: Clip.hardEdge, // overflow hidden
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 84, 83, 83),
                     borderRadius: BorderRadius.circular(20)),
                 child: Padding(
                   padding: const EdgeInsets.all(30),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,6 +155,19 @@ class App extends StatelessWidget {
                             ],
                           )
                         ],
+                      ),
+                      Transform.scale(
+                        // Transform.scale 아이콘 5배 크기 키움
+                        scale: 2.2,
+                        child: Transform.translate(
+                          // 아이콘 위치 옮기기
+                          offset: const Offset(-5, 12),
+                          child: const Icon(
+                            Icons.euro_rounded,
+                            color: Colors.white,
+                            size: 88,
+                          ),
+                        ),
                       )
                     ],
                   ),
