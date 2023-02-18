@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro/widgets/button.dart';
 
 void main() {
   runApp(App());
@@ -12,7 +13,7 @@ class App extends StatelessWidget {
         backgroundColor: const Color(0xFF181818),
         body: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 40,
+            horizontal: 20,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,24 +71,16 @@ class App extends StatelessWidget {
                 height: 30,
               ),
               Row(
-                children: [
-                  //Container: div 같은 box
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(45),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 50,
-                        vertical: 20,
-                      ),
-                      child: Text(
-                        'Transfer',
-                        style: TextStyle(fontSize: 22),
-                      ),
-                    ),
-                  )
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Button(
+                      text: 'Transfer',
+                      bgColor: Colors.amber,
+                      textColor: Colors.black),
+                  Button(
+                      text: 'Request',
+                      bgColor: Colors.black,
+                      textColor: Colors.white),
                 ],
               )
             ],
